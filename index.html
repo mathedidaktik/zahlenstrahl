@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Ahmad Naveed Nassruddin" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" defer></script>
+    <script
+      src="./js/jquery-ui-touch-punch-master/jquery.ui.touch-punch.min.js"
+      defer
+    ></script>
+    <script
+      src="./js/jquery-ui-touch-punch-master/jquery.ui.touch-punch.js"
+      defer
+    ></script>
+    <script src="./js/app.js" defer></script>
+
+    <title>Zahlenstrahl</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-left">
+          <button class="btn" id="start-btn" onclick="start()">Start</button>
+        </div>
+        <div class="header-mid" id="shownumber">
+          <p class="firstLine" id="first-line"></p>
+          <p class="secondLine" id="second-line"></p>
+          <p class="thirdLine" id="third-line"></p>
+        </div>
+        <div class="header-right">
+          <button
+            class="btn"
+            id="readbtn"
+            onclick="read_text()"
+            title="Zahl lesen"
+          >
+            <img class="speaker" src="./imgs/speak-3-48.png" alt="speaker" />
+          </button>
+        </div>
+      </div>
+      <div class="main" id="main">
+        <div class="numberlines" id="number-lines">
+          <div class="box1" id="box-1">
+            <svg class="svgs" id="svg-1"></svg>
+          </div>
+          <div class="box2" id="box-2">
+            <svg class="svgs" id="svg-2"></svg>
+          </div>
+          <div class="box3" id="box-3">
+            <svg class="svgs" id="svg-3"></svg>
+          </div>
+          <div class="box4" id="box-4">
+            <svg class="svgs" id="svg-4"></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

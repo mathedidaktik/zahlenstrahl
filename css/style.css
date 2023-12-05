@@ -1,0 +1,260 @@
+
+:root {
+  --container-height: 100vh;
+  --container-width: 100%;
+  /* Header part*/
+  --header-height: 10%;
+  --header-width: 95%;
+  --button-height: 8vmin;
+  --button-width: 8vmin;
+  /* Main part */
+  --main-height: 70%;
+  --main-width: 95%;
+  --numberline-height: 95%;
+  --numberline-width: 100%;
+  --box-height: 15%;
+  --box-width: 100%;
+  --svg-height: 100%;
+  --svg-width: 100%;
+
+  /* colors used */
+  --theme-color1: #bfe7da;
+  --theme-color2: #f0ede5;
+  --background-color: #e8ecf2;
+  --font-color-default: #000000;
+  --font-color-green: #4ab391;
+  --font-color-red: #e46f5f;
+  --start-button-color:#bfe7da;
+  --read-button-color:#e8ecf2;
+  --line-stroke-color:#000000;
+  --filter-hover-color:#ffffff73;
+  --filter-freez-color:#ffffff00;
+  --box1-color: #c0ccf1;
+
+  /* box1 primary color #c0ccf1  secondery color #c0ccf177  filter color after click #f89f5677 */
+  /* box2 primary color #f89f56  secondery color #f89f5677  filter color after click #75e99c77*/
+  /* box3 primary color #75e99c  secondery color #75e99c77  filter color after click #c399e677 */
+  /* box4 primary color #c399e6  secondery color #c399e677  */
+  
+  /* box shawdows */
+  --box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.25);
+
+
+    /* font sizes */
+  --font-line1: 2vmin;
+  --font-line2: 1.5vmin;
+  --font-universal: 1vmin;
+  --font-weight: 500;
+  --font-weight-universal: 250;
+  /* rulers lines (SVG line and text sizes) */
+  --small-lines-size: 0.1vmin;
+  --mid-lines-size: 0.2vmin;
+  --big-lines-size: 0.4vmin;
+  --texts-size: 1.5vmin;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Alter Version Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Moderne Browser (Chrome/Firefox/Opera) */
+  cursor: pointer;
+}
+
+body {
+  font-family: "GrundschriftRegular";
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* colors  #bfe7da greenish  theme color     #e8ecf2 whitesh Background color  #f7f2ddalternative theme color  */
+.container {
+  height: var(--container-height);
+  width: var(--container-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--background-color);
+  user-select: none;
+  z-index: -3;
+}
+
+/* header part starts here */
+.header {
+  height: var(--header-height);
+  width: var(--header-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.header-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-mid{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+
+}
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+}
+button {
+  border: none;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 250ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+.btn {
+  height: var(--button-height);
+  aspect-ratio: 1;
+  color: var(--font-color-default);
+  border-radius: 1em;
+  box-shadow:var(--box-shadow);
+}
+#start-btn {
+  background-color: var(--theme-color1);
+}
+#readbtn{
+  background-color: var(--read-button-color);
+}
+
+.black-line-big{
+  font-size: var(--font-line1);
+  font-weight: var(--font-weight);
+  color: var(--font-color-default);
+}
+.black-line-mid{
+  font-size: var(--font-line2);
+  font-weight: var(--font-weight);
+  color: var(--font-color-default);
+}
+.color-line-big{
+  font-size: var(--font-line1);
+  font-weight: var(--font-weight);
+  color: var(--font-color-green);
+}
+.color-line-big-red{
+  font-size: var(--font-line1);
+  font-weight: var(--font-weight);
+  color: var(--font-color-red);
+}
+/* Header rightside (reader button ) */
+.speaker {
+  width: 60%;
+}
+
+/* main area starts here */
+.main {
+  width: var(--main-width);
+  height: var(--main-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+.numberlines {
+  height: var(--numberline-height);
+  width: var(--numberline-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.box1,
+.box2,
+.box3,
+.box4 {
+  height: var(--box-height);
+  width: var(--box-width);
+  border-radius: 2em;
+  box-shadow:var(--box-shadow);
+}
+.box1 {
+  background-color: var(--box1-color);
+}
+.svgs {
+  height: var(--svg-height);
+  width: var(--svg-width);
+}
+.small-lines {
+  stroke: var(--line-stroke-color);
+  stroke-width: var(--small-lines-size);
+}
+.big-lines {
+  stroke: var(--line-stroke-color);
+  stroke-width: var(--big-lines-size);
+}
+.mid-lines {
+  stroke: var(--line-stroke-color);
+  stroke-width: var(--mid-lines-size);
+}
+.text {
+  fill: var(--line-stroke-color);
+  font-size: var(--texts-size);
+ 
+}
+.wronganswer{
+  fill: var(--font-color-red);
+  font-weight: bold;
+}
+.filter {
+  height: 7%;
+  width: 8.1%;
+  position: absolute;
+  border-radius: 0.7em;
+}
+.filter:hover {
+  background:var(--filter-hover-color);
+}
+.filter2 {
+  height: 10%;
+  width: 3%;
+  position: absolute
+}
+.freez {
+  width: var(--main-width);
+  height: var(--main-height);
+  position: absolute;
+  background-color: var(--filter-freez-color);
+}
+.animated-div{
+  border-radius: 2em;
+  z-index: -1;
+}
+
+.headerText{
+  font-size:28px;
+}
+
+.headerText2{
+  font-size:22px;
+}
+
+
+/* when hover on a button change color only for non touch screens */
+@media (hover: hover) {
+  .btn:hover {
+    background-color: var(--theme-color1);
+    box-shadow: -1px -1px 5px rgba(255, 255, 255, 0.6),
+      1px 1px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 1),
+      inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
