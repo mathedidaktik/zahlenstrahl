@@ -247,7 +247,9 @@ button {
 .headerText2{
   font-size:22px;
 }
-
+.footer button{
+    font-size:smaller;
+}
 
 /* when hover on a button change color only for non touch screens */
 @media (hover: hover) {
