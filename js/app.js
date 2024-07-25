@@ -16,7 +16,7 @@ const header_text_line3 = $("#third-line");
 const svgns = "http://www.w3.org/2000/svg";
 
 let minValue = 0;
-let maxValue = 0;
+let maxValue = 10000;
 let random_number = 0;
 
 // get the values from URL parameters
