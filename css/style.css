@@ -122,6 +122,14 @@ button {
   justify-content: center;
   font-size: 23px;
 }
+div.infos {
+  font-size: 12px;
+}
+div.infos button{
+  font-size: 12px;
+  font-weight: bold;
+  float:right;
+}
 .btn {
   height: var(--button-height);
   aspect-ratio: 1;
@@ -247,9 +255,6 @@ button {
 .headerText2{
   font-size:22px;
 }
-.footer button{
-    font-size:smaller;
-}
 
 /* when hover on a button change color only for non touch screens */
 @media (hover: hover) {
@@ -259,4 +264,8 @@ button {
       1px 1px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 1),
       inset 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
+}
+#footer {
+  position:fixed;
+  bottom: 20px;
 }
